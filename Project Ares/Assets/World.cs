@@ -33,4 +33,14 @@ public class World
             }
         }
     }
+
+
+    public Tile GetTileAt(int i, int j)
+    {
+        if(i < 0 || i >= MapWidth || j < 0 || j >= MapHeight)
+        {
+            return null;
+        }
+        return WorldMap[i, j];
+    }
 }

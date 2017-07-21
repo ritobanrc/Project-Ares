@@ -6,7 +6,7 @@ using UnityEngine;
 public class WorldView : MonoBehaviour
 {
     public Sprite[] BaseTileSprites;
-
+    public event Action<Tile, GameObject> TileGameObjectUpdated; 
 
     public void SetupInitialWorld(World world)
     {
@@ -21,6 +21,8 @@ public class WorldView : MonoBehaviour
                 tileGo.transform.position = new Vector3(i, j);
                 SpriteRenderer sr = tileGo.AddComponent<SpriteRenderer>();
                 sr.sprite = BaseTileSprites[UnityEngine.Random.Range(0, BaseTileSprites.Length)];
+                if (TileGameObjectUpdated != null)
+                    TileGameObjectUpdated(tile, tileGo);
             }
         }
     }
