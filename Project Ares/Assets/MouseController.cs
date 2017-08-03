@@ -11,7 +11,7 @@ public class MouseController : Singleton<MouseController>
     public bool invertScroll = false;
 
     public Vector3 MousePosition { get; protected set; }
-    public Tile tileUnderMouse { get; protected set; }
+    public Tile TileUnderMouse { get; protected set; }
 
     private void Update()
     {
@@ -51,6 +51,6 @@ public class MouseController : Singleton<MouseController>
     {
         int i = Mathf.RoundToInt(MousePosition.x);
         int j = Mathf.RoundToInt(MousePosition.y);
-        tileUnderMouse = WorldController.Instance.GetTileAt(i, j);
+        TileUnderMouse = WorldController.Instance.GetTileAt(i, j);
     }
 }

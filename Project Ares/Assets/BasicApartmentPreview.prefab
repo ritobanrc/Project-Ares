@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4222667795648260}
   - component: {fileID: 212203882351260328}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4481100948634144}
   - component: {fileID: 114138128095991398}
   m_Layer: 0
-  m_Name: SimpleDwellingPreview
+  m_Name: BasicApartmentPreview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,6 +81,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e2bfbd32169e5468b790ed42bb8334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Data:
+    Name: Basic Apartment
+    IconPath: apartment
 --- !u!212 &212203882351260328
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -113,11 +116,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e5016923adb079c4ba3976b1ba2b62bc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fbb8c9ac9b66f664f891aa655e593844, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.25, y: 2.25}
+  m_Size: {x: 1, y: 0.8933333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0

@@ -9,13 +9,15 @@ public class UI_TileUnderMouse : MonoBehaviour
 
     private void LateUpdate()
     {
-        Tile underMouse = MouseController.Instance.tileUnderMouse;
+        Tile underMouse = MouseController.Instance.TileUnderMouse;
         if (underMouse != null)
         {
             string text = "Tile\n";
             text += "X: " + underMouse.X + "\n";
             text += "Y: " + underMouse.Y + "\n";
             text += "Room: Dome 1 \nAir Pressure: 1.3 atmo \n";
+            if (underMouse.PlacedObject != null)
+                text += "\n Object On Tile: " + underMouse.PlacedObject.ToString();
             textMesh.text = text;
         }
         else

@@ -1,16 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaceableObject : MonoBehaviour {
+public class PlaceableObject
+{
+    public PlaceableObjectData Data { get; protected set; }
+    public string Name
+    {
+        get
+        {
+            return Data.Name;
+        }
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public readonly Tile Tile;
+
+    public PlaceableObject(PlaceableObjectData data, Tile tile)
+    {
+        Data = data;
+        Tile = tile;
+    }
+
+    public override string ToString()
+    {
+        return Name;
+    }
 }

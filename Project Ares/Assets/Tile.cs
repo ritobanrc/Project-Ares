@@ -14,14 +14,28 @@ public class Tile
     // Tiles keep a reference to the world
     public readonly World World;
 
-
+    private PlaceableObject _placedObject;
+    public PlaceableObject PlacedObject
+    {
+        get
+        {
+            return _placedObject;
+        }
+        set
+        {
+            _placedObject = value;
+            if (OnObjectPlaced != null)
+                OnObjectPlaced(PlacedObject);
+        }
+    }
+    public event Action<PlaceableObject> OnObjectPlaced;
     // A few things for later
     /*
      * Room
      * Air Pressure
      * Temperature
      * Craters?
-     * Buildings - Or just generic residential/commericial/industrial labels
+     * Buildings - Or just generic residential/commericial/industrial labels?
      */ 
 
 
@@ -30,5 +44,10 @@ public class Tile
         X = x;
         Y = y;
         World = world;
+    }
+
+    public override string ToString()
+    {
+        return "Tile " + X.ToString() + "_" + Y.ToString();
     }
 }
